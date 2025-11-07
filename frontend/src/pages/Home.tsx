@@ -10,7 +10,7 @@ const Home = () => {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex-1 flex flex-col items-start justify-center text-left space-y-6"
+        className="flex-1 flex flex-col items-start justify-center text-left space-y-6 pt-12"
       >
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
           Hi, I'm{" "}
