@@ -1,11 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) setIsScrolled(true);
+      else setIsScrolled(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -16,9 +27,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full h-[80px] z-50 bg-D-purple backdrop-blur-md border-b border-cyan-900/30">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo / Name */}
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-[#0a0a0a]/90 backdrop-blur-lg shadow-md border-b border-cyan-900/40 py-2"
+          : "bg-transparent py-4"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -32,18 +49,17 @@ const Navbar = () => {
           </Link>
         </motion.div>
 
-        {/* Desktop Nav Links */}
-        <div className="hidden md:flex  items-center gap-8">
+        {/* Desktop Links Centered */}
+        <div className="hidden md:flex flex-1 justify-center items-center gap-10">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className={`relative text-gray-300 hover:text-cyan-300 transition 
-                ${
-                  location.pathname === link.path
-                    ? "text-cyan-400 font-semibold"
-                    : ""
-                }`}
+              className={`relative text-gray-300 text-lg hover:text-cyan-300 transition ${
+                location.pathname === link.path
+                  ? "text-cyan-400 font-semibold"
+                  : ""
+              }`}
             >
               {link.name}
               {location.pathname === link.path && (
