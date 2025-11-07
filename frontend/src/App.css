@@ -2,7 +2,7 @@
 
 /* bgs */
 
-.bg{
+.bg-D-purple{
 background: radial-gradient(circle,rgba(41, 8, 89, 1) 0%, rgba(38, 8, 77, 1) 50%, rgba(23, 4, 46, 1) 100%);
 background: radial-gradient(circle,rgba(41, 8, 89, 1) 0%, rgba(26, 5, 54, 1) 50%, rgba(19, 6, 46, 1) 100%);
 }
