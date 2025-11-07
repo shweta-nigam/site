@@ -57,7 +57,7 @@ const projects = [
 
 const Project = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-[#00241F] via-[#540979] to-[#0066FF] text-white py-16 px-6 md:px-20">
+    <section className="min-h-screen bg-D-purple text-white py-16 px-6 md:px-20">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -75,9 +75,11 @@ const Project = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className={`flex flex-col md:flex-row ${
-              index % 2 !== 0 ? "md:flex-row-reverse" : ""
-            } items-center gap-10 bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow`}
+            // className={`flex flex-col md:flex-row ${
+            //   index % 2 !== 0 ? "md:flex-row-reverse" : ""
+            // } items-center gap-10 bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow`}
+            className="flex flex-col md:flex-row items-center gap-10 bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow"
+
           >
             <div className="md:w-1/2">
               <img
