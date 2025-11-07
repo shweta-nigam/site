@@ -11,11 +11,12 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Projects", path: "/projects" },
     { name: "About", path: "/about" },
+    { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-cyan-900/30">
+    <nav className="fixed top-0 left-0 w-full h-[80px] z-50 bg-D-purple backdrop-blur-md border-b border-cyan-900/30">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo / Name */}
         <motion.div
@@ -25,14 +26,14 @@ const Navbar = () => {
         >
           <Link
             to="/"
-            className="text-2xl font-bold text-cyan-400 hover:text-cyan-300 transition"
+            className="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition"
           >
             &lt;DevPortfolio /&gt;
           </Link>
         </motion.div>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex  items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
