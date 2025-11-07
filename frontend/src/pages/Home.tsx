@@ -72,7 +72,7 @@ const Home = () => {
       >
         <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-cyan-400 shadow-lg shadow-cyan-900/50">
           <img
-            src="/assets/profile.png" // 👉 replace with your image path
+            src="/dev-img.png"
             alt="Developer portrait"
             className="w-full h-full object-cover"
           />
