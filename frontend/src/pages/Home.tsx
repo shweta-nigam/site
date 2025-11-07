@@ -4,24 +4,29 @@ import { ArrowRight, Github, Linkedin } from "lucide-react";
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#00241F] via-[#540979] to-[#0066FF] text-white px-6">
-      {/* Hero Section */}
+    <div className="min-h-screen w-full flex flex-col md:flex-row items-center justify-center bg-D-purple text-white px-8 md:px-20">
+      {/* Left Section - Info */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center max-w-3xl"
+        className="flex-1 flex flex-col items-start justify-center text-left space-y-6"
       >
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-4">
-          Hi, I'm <span className="text-cyan-300">a MERN Stack Developer</span>
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+          Hi, I'm{" "}
+          <span className="text-cyan-300">a MERN Stack Developer</span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-200 mb-6">
-          Full Stack Developer passionate about building dynamic web apps using
-          <span className="font-semibold"> MongoDB, Express, React, and Node.js</span>.
+
+        <p className="text-lg md:text-xl text-gray-300 max-w-lg">
+          Full Stack Developer passionate about building modern and scalable
+          web applications using{" "}
+          <span className="font-semibold text-white">
+            MongoDB, Express, React, and Node.js
+          </span>.
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
+        <div className="flex flex-wrap items-center gap-4">
           <Link
             to="/projects"
             className="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-black font-semibold rounded-2xl flex items-center gap-2 transition-all"
@@ -38,7 +43,7 @@ const Home = () => {
         </div>
 
         {/* Social Links */}
-        <div className="flex justify-center gap-6 mt-10">
+        <div className="flex gap-6 mt-6">
           <a
             href="https://github.com/yourusername"
             target="_blank"
@@ -58,10 +63,21 @@ const Home = () => {
         </div>
       </motion.div>
 
-      {/* Footer */}
-      <footer className="absolute bottom-4 text-gray-400 text-sm">
-        © {new Date().getFullYear()} MERN Stack Developer Portfolio
-      </footer>
+      {/* Right Section - Profile Image */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="flex-1 flex items-center justify-center mt-10 md:mt-0"
+      >
+        <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-cyan-400 shadow-lg shadow-cyan-900/50">
+          <img
+            src="/assets/profile.png" // 👉 replace with your image path
+            alt="Developer portrait"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </motion.div>
     </div>
   );
 };
