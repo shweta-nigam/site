@@ -14,7 +14,7 @@ const skills = [
 
 const About = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-[#00241F] via-[#540979] to-[#0066FF] text-white py-20 px-6 md:px-20">
+    <section className="min-h-screen bg-D-purple text-white py-20 px-6 md:px-20">
       {/* Title */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -22,7 +22,7 @@ const About = () => {
         transition={{ duration: 0.6 }}
         className="text-4xl md:text-5xl font-bold text-center mb-12"
       >
-        👋 About Me
+        About Me
       </motion.h2>
 
       {/* Intro */}
@@ -34,25 +34,32 @@ const About = () => {
         className="max-w-4xl mx-auto text-gray-200 space-y-6 text-lg leading-relaxed bg-white/10 backdrop-blur-md p-10 rounded-2xl shadow-lg"
       >
         <p>
-          I’m a <span className="text-cyan-400 font-semibold">Full Stack Developer</span> with a strong passion for
-          building interactive, high-performance, and scalable web applications. I love
-          combining design and logic to deliver smooth user experiences and maintainable
-          backend systems.
+          I’m a{" "}
+          <span className="text-cyan-400 font-semibold">
+            Full Stack Developer
+          </span>{" "}
+          with a strong passion for building interactive, high-performance, and
+          scalable web applications. I love combining design and logic to
+          deliver smooth user experiences and maintainable backend systems.
         </p>
 
         <p>
-          My expertise lies primarily in the <span className="text-cyan-300">MERN stack</span> — crafting elegant
-          frontends using React, TypeScript, and TailwindCSS, while developing secure,
-          optimized REST APIs with Node.js, Express, and MongoDB. I’m constantly learning
-          and refining my skills to stay aligned with modern development practices.
+          My expertise lies primarily in the{" "}
+          <span className="text-cyan-300">MERN stack</span> — crafting elegant
+          frontends using React, TypeScript, and TailwindCSS, while developing
+          secure, optimized REST APIs with Node.js, Express, and MongoDB. I’m
+          constantly learning and refining my skills to stay aligned with modern
+          development practices.
         </p>
 
         <p>
-          I enjoy transforming ideas into reality through code — whether it’s building
-          personal projects like <span className="text-cyan-300">ReadGala</span> and{" "}
-          <span className="text-cyan-300">FinEase</span>, or experimenting with new tools
-          and libraries. My goal is to keep growing, collaborating with inspiring people,
-          and creating digital products that make a difference.
+          I enjoy transforming ideas into reality through code — whether it’s
+          building personal projects like{" "}
+          <span className="text-cyan-300">ReadGala</span> and{" "}
+          <span className="text-cyan-300">FinEase</span>, or experimenting with
+          new tools and libraries. My goal is to keep growing, collaborating
+          with inspiring people, and creating digital products that make a
+          difference.
         </p>
       </motion.div>
 
@@ -94,7 +101,8 @@ const About = () => {
           <Rocket className="text-cyan-400 mb-4 mx-auto" size={36} />
           <h4 className="text-xl font-semibold mb-2">Innovation</h4>
           <p className="text-gray-300 text-sm">
-            I enjoy experimenting with new technologies and improving efficiency through creative problem-solving.
+            I enjoy experimenting with new technologies and improving efficiency
+            through creative problem-solving.
           </p>
         </div>
 
@@ -102,7 +110,8 @@ const About = () => {
           <Laptop className="text-cyan-400 mb-4 mx-auto" size={36} />
           <h4 className="text-xl font-semibold mb-2">Craftsmanship</h4>
           <p className="text-gray-300 text-sm">
-            I believe good code is clean, scalable, and built with care — each line contributing to something meaningful.
+            I believe good code is clean, scalable, and built with care — each
+            line contributing to something meaningful.
           </p>
         </div>
 
@@ -110,7 +119,8 @@ const About = () => {
           <Brain className="text-cyan-400 mb-4 mx-auto" size={36} />
           <h4 className="text-xl font-semibold mb-2">Growth</h4>
           <p className="text-gray-300 text-sm">
-            Continuous learning is at the heart of my journey — every project, failure, and success is an opportunity to grow.
+            Continuous learning is at the heart of my journey — every project,
+            failure, and success is an opportunity to grow.
           </p>
         </div>
       </motion.div>
