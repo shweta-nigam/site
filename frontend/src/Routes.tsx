@@ -1,6 +1,7 @@
 import { Route , Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
+import About from "./pages/About";
 
 
 function AppRoutes() {
@@ -8,6 +9,7 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/projects" element={<Project />} />
+      <Route path="/about" element={<About />} />
       <Route path="*" element={<div className="text-white text-center py-20">404 - Page Not Found</div>} />
     </Routes>
   );
