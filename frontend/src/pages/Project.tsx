@@ -1,35 +1,12 @@
 import { motion } from "framer-motion";
 import { Github, Globe, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import readGala from "../../src/assets/readgala.mp4"
+import finEase from "../../src/assets/finease.mp4"
 
 const projects = [
-  {
+   {
     id: 1,
-    title: "ReadGala - Online Book Store",
-    description:
-      "A full-stack MERN online bookstore that allows users to browse, purchase, and manage books seamlessly. It features secure authentication, a powerful search system, email notifications, and a modern shopping UI built with React and TailwindCSS.",
-    techStack: [
-      "React",
-      "Node.js",
-      "Express",
-      "Prisma",
-      "PostgreSQL",
-      "JWT",
-      "TailwindCSS",
-    ],
-    features: [
-      "🔐 User authentication & JWT security",
-      "📚 Book browsing and purchase flow",
-      "📧 Email notifications using Nodemailer",
-      "⚡ Backend built with Express & Prisma ORM",
-      "🎨 Responsive frontend with TailwindCSS & Framer Motion",
-    ],
-    github: "https://github.com/your-username/ReadGala",
-    live: "https://readgala.vercel.app",
-    image: "/assets/readgala-preview.png",
-  },
-  {
-    id: 2,
     title: "FinEase - Personal Finance Tracker",
     description:
       "FinEase is a modern personal finance tracking platform that helps users manage budgets, track expenses, and visualize financial data in real-time. It includes authentication, Google OAuth, charts, and email verification.",
@@ -51,8 +28,34 @@ const projects = [
     ],
     github: "https://github.com/your-username/FinEase",
     live: "https://finease.vercel.app",
-    image: "/assets/finease-preview.png",
+    video: finEase,
   },
+  {
+    id: 2,
+    title: "ReadGala - Online Book Store",
+    description:
+      "A full-stack MERN online bookstore that allows users to browse, purchase, and manage books seamlessly. It features secure authentication, a powerful search system, email notifications, and a modern shopping UI built with React and TailwindCSS.",
+    techStack: [
+      "React",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+      "JWT",
+      "TailwindCSS",
+    ],
+    features: [
+      "🔐 User authentication & JWT security",
+      "📚 Book browsing and purchase flow",
+      "📧 Email notifications using Nodemailer",
+      "⚡ Backend built with Express & Prisma ORM",
+      "🎨 Responsive frontend with TailwindCSS & Framer Motion",
+    ],
+    github: "https://github.com/your-username/ReadGala",
+    live: "https://readgala.vercel.app",
+    video: readGala,
+  }
+ 
 ];
 
 const Project = () => {
@@ -82,10 +85,10 @@ const Project = () => {
 
           >
             <div className="md:w-1/2">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="rounded-xl shadow-lg border border-white/10"
+              <video
+                src={project.video} 
+                autoPlay loop muted playsInline 
+                // className="rounded-xl shadow-lg border border-white/10"
               />
             </div>
 
