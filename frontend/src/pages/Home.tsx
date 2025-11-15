@@ -17,7 +17,6 @@ const Home = () => {
     <div className="min-h-screen w-full bg-D-purple text-white">
       {/* --------------------- HERO SECTION --------------------- */}
       <section className="flex flex-col md:flex-row items-center justify-center gap-12 px-8 md:px-20 py-24">
-        
         {/* Left - Info */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -25,7 +24,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="flex-1 space-y-6"
         >
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight pt-16">
             Hi, I'm{" "}
             <span className="text-cyan-300">a MERN Stack Developer</span>
           </h1>
@@ -82,18 +81,26 @@ const Home = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex-1 flex items-center justify-center"
         >
-          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-cyan-400 shadow-lg shadow-cyan-900/50">
+          <div className="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center">
+            {/* Background Image */}
+            <img
+              src="/img-bg.png"
+              alt="Abstract background"
+              className="w-full h-full object-cover rounded-full opacity-80 scale-125"
+            />
+
+            {/* Profile Image */}
             <img
               src="/dev-img.png"
-              alt="Developer portrait"
-              className="w-full h-full object-cover"
+              alt="Developer"
+              className="absolute w-40 h-40 md:w-56 md:h-56 rounded-full  border-4 border-cyan-400 shadow-lg"
             />
           </div>
         </motion.div>
       </section>
 
       {/* --------------------- TECH STACK --------------------- */}
-      <section className="py-16 bg-[#0f001c]/50 backdrop-blur-sm">
+      <section className="py-16 backdrop-blur-sm border border-cyan-400 hover:bg-[#300753] rounded-2xl">
         <h2 className="text-center text-3xl font-bold mb-10">
           Tech Stack & Tools
         </h2>
@@ -136,7 +143,9 @@ const Home = () => {
 
       {/* --------------------- FEATURED PROJECTS --------------------- */}
       <section className="py-20 px-8 md:px-20">
-        <h2 className="text-3xl font-bold mb-10 text-center">Featured Projects</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center">
+          Featured Projects
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-10">
           {/* Project Card 1 */}
@@ -145,7 +154,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#150026] p-6 rounded-2xl border border-cyan-700/40 hover:border-cyan-400 transition shadow-lg"
+            className="bg-[#300753] p-6 rounded-2xl border border-cyan-700/40 hover:border-cyan-400 transition shadow-lg"
           >
             <h3 className="text-xl font-bold">Project One</h3>
             <p className="text-gray-300 mt-2">
@@ -166,12 +175,12 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-[#150026] p-6 rounded-2xl border border-cyan-700/40 hover:border-cyan-400 transition shadow-lg"
+            className="bg-[#300753] p-6 rounded-2xl border border-cyan-700/40 hover:border-cyan-400 transition shadow-lg"
           >
             <h3 className="text-xl font-bold">Project Two</h3>
             <p className="text-gray-300 mt-2">
-              Short description of your second featured project. Mention the tech
-              used or the main feature.
+              Short description of your second featured project. Mention the
+              tech used or the main feature.
             </p>
             <Link
               to="/projects"
@@ -184,14 +193,15 @@ const Home = () => {
       </section>
 
       {/* --------------------- MINI ABOUT --------------------- */}
-      <section className="py-20 px-8 md:px-20 bg-[#0d0015]">
+      <section className="py-20 px-8 md:px-20 ">
         <h2 className="text-3xl font-bold mb-6 text-center">About Me</h2>
 
         <p className="text-gray-300 text-lg max-w-3xl mx-auto text-center leading-relaxed">
-          I'm a MERN Stack Developer focused on building responsive, user-friendly
-          and high-performance applications. I enjoy creating clean UI, solving 
-          logical problems and understanding systems end-to-end. Always learning, 
-          improving and working on exciting projects.
+          I'm a MERN Stack Developer focused on building responsive,
+          user-friendly and high-performance applications. I enjoy creating
+          clean UI, solving logical problems and understanding systems
+          end-to-end. Always learning, improving and working on exciting
+          projects.
         </p>
 
         <div className="flex justify-center mt-8">
@@ -205,10 +215,15 @@ const Home = () => {
       </section>
 
       {/* --------------------- CONTACT CTA --------------------- */}
+      <hr className="border-white mx-20 my-10 opacity-30" />
       <section className="py-20 text-center">
-        <h2 className="text-3xl font-bold">Let’s Work Together</h2>
+        <h2 className="text-3xl font-bold">
+          Open to Full-Stack, Frontend & Backend Roles
+        </h2>
         <p className="text-gray-300 mt-2 text-lg">
-          Have a project idea or want to collaborate?
+          I'm actively seeking opportunities as a Full-Stack Developer (MERN),
+          or specialized Frontend/Backend roles. If you have an opening or want
+          to collaborate, I'd love to connect.
         </p>
 
         <Link
