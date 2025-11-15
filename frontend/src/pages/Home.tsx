@@ -5,7 +5,7 @@ import {
   SiMongodb,
   SiExpress,
   SiReact,
-  SiNodeDotJs,
+  SiNodedotjs,
   SiJavascript,
   SiTypescript,
   SiTailwindcss,
@@ -112,7 +112,7 @@ const Home = () => {
             React
           </div>
           <div className="flex flex-col items-center gap-2">
-            <SiNodeDotJs size={35} className="text-green-500" />
+            <SiNodedotjs size={35} className="text-green-500" />
             Node.js
           </div>
           <div className="flex flex-col items-center gap-2">
