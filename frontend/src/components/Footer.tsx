@@ -8,7 +8,7 @@ const Footer = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="w-full mt-20 py-10 bg-[#0b0013] text-gray-300 border-t border-cyan-400/20"
+      className="w-full py-10 bg-D-purple text-gray-300 border-t border-cyan-400/20"
     >
       {/* Top Section - Links */}
       <div className="flex flex-col md:flex-row items-center justify-between px-8 md:px-20 gap-6">
@@ -17,7 +17,7 @@ const Footer = () => {
           whileHover={{ scale: 1.05 }}
           className="text-xl font-semibold text-white"
         >
-          <Link to="/">Your Portfolio</Link>
+          {/* <Link to="/"> Portfolio</Link> */}
         </motion.h3>
 
         {/* Navigation */}
@@ -68,7 +68,7 @@ const Footer = () => {
 
       {/* Bottom Copy */}
       <p className="text-center text-gray-500 text-sm mt-8">
-        © {new Date().getFullYear()} Your Name. All rights reserved.
+        © {new Date().getFullYear()} Shweta Nigam. All rights reserved.
       </p>
     </motion.footer>
   );
