@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 
 const Footer = () => {
   return (
@@ -44,7 +45,7 @@ const Footer = () => {
             target="_blank"
             className="hover:text-cyan-300 transition"
           >
-            <Github className="w-5 h-5" />
+            <SiGithub className="w-5 h-5" />
           </motion.a>
 
           <motion.a
@@ -53,7 +54,7 @@ const Footer = () => {
             target="_blank"
             className="hover:text-cyan-300 transition"
           >
-            <Linkedin className="w-5 h-5" />
+            <SiLinkedin className="w-5 h-5" />
           </motion.a>
 
           <motion.a
