@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Github, Linkedin } from "lucide-react";
+import { ArrowRight} from "lucide-react";
+import { SiGithub , SiLinkedin } from "react-icons/si";
 import {
   SiMongodb,
   SiExpress,
@@ -24,9 +25,10 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="flex-1 space-y-6"
         >
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight pt-16">
-            Hi, I'm{" "}
-            <span className="text-cyan-300">a MERN Stack Developer</span>
+          <h1 className="text-3xl md:text-4xl font-extrabold leading-tight pt-16">
+            Hi, I'm 
+            <span className="text-cyan-300"> Shweta Nigam </span>a MERN Stack
+            Developer
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 max-w-lg">
@@ -61,7 +63,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="hover:text-cyan-300 transition"
             >
-              <Github className="w-6 h-6" />
+              <SiGithub className="w-6 h-6" />
             </a>
             <a
               href="https://linkedin.com/in/yourusername"
@@ -69,7 +71,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="hover:text-cyan-300 transition"
             >
-              <Linkedin className="w-6 h-6" />
+              <SiLinkedin className="w-6 h-6" />
             </a>
           </div>
         </motion.div>
