@@ -58,7 +58,7 @@ const Home = () => {
           {/* Socials */}
           <div className="flex gap-6 mt-6">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/shweta-nigam"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-cyan-300 transition"
@@ -66,7 +66,7 @@ const Home = () => {
               <SiGithub className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/shweta-nigam-1b4b4a322/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-cyan-300 transition"
@@ -158,10 +158,9 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="bg-[#300753] p-6 rounded-2xl border border-cyan-700/40 hover:border-cyan-400 transition shadow-lg"
           >
-            <h3 className="text-xl font-bold">Project One</h3>
+            <h3 className="text-xl font-bold">FinEase: A personal finance tracker</h3>
             <p className="text-gray-300 mt-2">
-              Short description of your first featured MERN project. Explain the
-              key idea in one sentence.
+              A simple and easy dashboard to track expense , income and make budget.
             </p>
             <Link
               to="/projects"
@@ -179,10 +178,9 @@ const Home = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-[#300753] p-6 rounded-2xl border border-cyan-700/40 hover:border-cyan-400 transition shadow-lg"
           >
-            <h3 className="text-xl font-bold">Project Two</h3>
+            <h3 className="text-xl font-bold">ReadGala : An online book store</h3>
             <p className="text-gray-300 mt-2">
-              Short description of your second featured project. Mention the
-              tech used or the main feature.
+              An online book store to buy books from.
             </p>
             <Link
               to="/projects"
