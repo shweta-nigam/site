@@ -93,7 +93,7 @@ const Contact = () => {
           <SiLinkedin size={28} />
         </a>
         <a
-          href="shwetanigam2106@gmail.com"
+          href="mailto:shwetanigam2106@gmail.com"
           className="text-white hover:scale-125 transition transform"
         >
           <SiGmail size={28} />
