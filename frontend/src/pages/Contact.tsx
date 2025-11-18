@@ -42,18 +42,21 @@ const Contact = () => {
 
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
             className="w-full px-4 py-3 rounded-lg bg-white/20 placeholder-gray-300 text-white outline-none focus:ring-2 focus:ring-blue-400"
           />
 
           <input
             type="email"
+            name="email"
             placeholder="Your Email"
             className="w-full px-4 py-3 rounded-lg bg-white/20 placeholder-gray-300 text-white outline-none focus:ring-2 focus:ring-blue-400"
           />
 
           <textarea
             placeholder="Your Message"
+            name="message"
             rows={5}
             className="w-full px-4 py-3 rounded-lg bg-white/20 placeholder-gray-300 text-white outline-none focus:ring-2 focus:ring-blue-400"
           ></textarea>
