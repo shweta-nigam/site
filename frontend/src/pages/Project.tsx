@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Github, Globe, ArrowRight } from "lucide-react";
+import { Globe, ArrowRight } from "lucide-react";
+import { SiGithub } from "react-icons/si";
 import { Link } from "react-router-dom";
-import readGala from "../../src/assets/readgala.mp4"
-import finEase from "../../src/assets/finease.mp4"
+import readGala from "../../src/assets/readgala.mp4";
+import finEase from "../../src/assets/finease.mp4";
 
 const projects = [
-   {
+  {
     id: 1,
     title: "FinEase - Personal Finance Tracker",
     description:
@@ -54,8 +55,7 @@ const projects = [
     github: "https://github.com/your-username/ReadGala",
     live: "https://readgala.vercel.app",
     video: readGala,
-  }
- 
+  },
 ];
 
 const Project = () => {
@@ -67,7 +67,7 @@ const Project = () => {
         transition={{ duration: 0.6 }}
         className="text-4xl md:text-5xl font-bold text-center mb-12"
       >
-        🚀 Featured Projects
+        Featured Projects
       </motion.h2>
 
       <div className="flex flex-col gap-20">
@@ -82,12 +82,14 @@ const Project = () => {
             //   index % 2 !== 0 ? "md:flex-row-reverse" : ""
             // } items-center gap-10 bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow`}
             className="flex flex-col md:flex-row items-center gap-10 bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow"
-
           >
             <div className="md:w-1/2">
               <video
-                src={project.video} 
-                autoPlay loop muted playsInline 
+                src={project.video}
+                autoPlay
+                loop
+                muted
+                playsInline
                 // className="rounded-xl shadow-lg border border-white/10"
               />
             </div>
@@ -121,7 +123,8 @@ const Project = () => {
                   target="_blank"
                   className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full font-medium hover:scale-105 transition-transform"
                 >
-                  <Github size={18} /> Code
+                  <SiGithub className="w-6 h-6" />
+                  Code
                 </Link>
                 <Link
                   to={project.live}
