@@ -73,21 +73,21 @@ const Contact = () => {
         className="flex space-x-6 mt-10"
       >
         <a
-          href="https://github.com/"
+          href="https://github.com/shweta-nigam"
           target="_blank"
           className="text-white hover:scale-125 transition transform"
         >
           <SiGithub size={28} />
         </a>
         <a
-          href="https://linkedin.com/"
+          href="https://www.linkedin.com/in/shweta-nigam-1b4b4a322/"
           target="_blank"
           className="text-white hover:scale-125 transition transform"
         >
           <SiLinkedin size={28} />
         </a>
         <a
-          href="mailto:example@gmail.com"
+          href="shwetanigam2106@gmail.com"
           className="text-white hover:scale-125 transition transform"
         >
           <SiGmail size={28} />
