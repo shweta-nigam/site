@@ -4,12 +4,7 @@ import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 
 const Contact = () => {
   return (
-    <section
-      className="min-h-screen flex flex-col justify-center items-center px-6 py-20 text-white"
-      style={{
-        background: "linear-gradient(135deg, rgba(0,36,31,1) 0%, rgba(84,9,121,1) 50%, rgba(0,102,255,1) 100%)",
-      }}
-    >
+    <section className="min-h-screen flex flex-col justify-center items-center px-6 py-20 text-white bg-D-purple">
       {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
@@ -26,7 +21,8 @@ const Contact = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="text-gray-200 text-lg md:text-xl max-w-xl text-center mb-10"
       >
-        Feel free to reach out for opportunities, collaborations, or just to say hi!
+        Feel free to reach out for opportunities, collaborations, or just to say
+        hi!
       </motion.p>
 
       {/* Contact Box */}
@@ -36,7 +32,14 @@ const Contact = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="bg-white/10 backdrop-blur-xl p-8 rounded-2xl shadow-xl w-full max-w-lg border border-white/20"
       >
-        <form className="flex flex-col space-y-5">
+        <form
+          action="https://formsubmit.co/shwetanigam2106@gmail.com"
+          method="POST"
+          className="flex flex-col space-y-5"
+        >
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="box" />
+
           <input
             type="text"
             placeholder="Your Name"
