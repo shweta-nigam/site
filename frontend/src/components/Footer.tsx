@@ -18,7 +18,10 @@ const Footer = () => {
           whileHover={{ scale: 1.05 }}
           className="text-xl font-semibold text-white"
         >
-          <Link to="/" className="text-cyan-300 "> shwetanigamdev</Link>
+          <Link to="/" className="text-cyan-300 ">
+            {" "}
+            shwetanigamdev
+          </Link>
         </motion.h3>
 
         {/* Navigation */}
@@ -41,7 +44,7 @@ const Footer = () => {
         <div className="flex gap-6">
           <motion.a
             whileHover={{ scale: 1.2 }}
-            href="https://github.com/yourusername"
+            href="https://github.com/shweta-nigam"
             target="_blank"
             className="hover:text-cyan-300 transition"
           >
@@ -50,7 +53,7 @@ const Footer = () => {
 
           <motion.a
             whileHover={{ scale: 1.2 }}
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/shweta-nigam-1b4b4a322/"
             target="_blank"
             className="hover:text-cyan-300 transition"
           >
@@ -59,7 +62,7 @@ const Footer = () => {
 
           <motion.a
             whileHover={{ scale: 1.2 }}
-            href="mailto:youremail@gmail.com"
+            href="mailto:shwetanigam2106@gmail.com"
             className="hover:text-cyan-300 transition"
           >
             <Mail className="w-5 h-5" />
