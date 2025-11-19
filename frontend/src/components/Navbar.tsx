@@ -45,7 +45,8 @@ const Navbar = () => {
             to="/"
             className="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition"
           >
-            &lt;DevPortfolio /&gt;
+            &lt; /&gt;
+            {/* &lt;DevPortfolio /&gt; */}
           </Link>
         </motion.div>
 
