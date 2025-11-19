@@ -90,7 +90,7 @@ const Project = () => {
                 loop
                 muted
                 playsInline
-                // className="rounded-xl shadow-lg border border-white/10"
+                className="rounded-xl shadow-lg border border-white/10"
               />
             </div>
 
