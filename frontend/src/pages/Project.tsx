@@ -28,7 +28,7 @@ const projects = [
       "🎨 Built with React + TailwindCSS + ShadCN",
     ],
     github: "https://github.com/your-username/FinEase",
-    live: "https://finease.vercel.app",
+    live: "https://finease-hub.vercel.app",
     video: finEase,
   },
   {
