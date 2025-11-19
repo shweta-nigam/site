@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
+import { sendMessage } from "../fetch";
+import { useState } from "react";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
     <section className="min-h-screen flex flex-col justify-center items-center px-6 py-20 text-white bg-D-purple">
       {/* Heading */}
@@ -33,17 +39,27 @@ const Contact = () => {
         className="bg-white/10 backdrop-blur-xl p-8 rounded-2xl shadow-xl w-full max-w-lg border border-white/20"
       >
         <form
-          action="https://formsubmit.co/shwetanigam2106@gmail.com"
-          method="POST"
+          onSubmit={async (e) => {
+            e.preventDefault();
+            const result = await sendMessage({ name, email, message });
+
+            if (result.success) {
+              alert("Message sent!");
+              setName("");
+              setEmail("");
+              setMessage("");
+            } else {
+              alert("Failed to send message");
+            }
+          }}
           className="flex flex-col space-y-5"
         >
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="box" />
-
           <input
             type="text"
             name="name"
             placeholder="Your Name"
+            onChange={(e)=> setName(e.target.value)}
+            required
             className="w-full px-4 py-3 rounded-lg bg-white/20 placeholder-gray-300 text-white outline-none focus:ring-2 focus:ring-blue-400"
           />
 
@@ -51,12 +67,16 @@ const Contact = () => {
             type="email"
             name="email"
             placeholder="Your Email"
+            onChange={(e)=> setEmail(e.target.value)}
+            required
             className="w-full px-4 py-3 rounded-lg bg-white/20 placeholder-gray-300 text-white outline-none focus:ring-2 focus:ring-blue-400"
           />
 
           <textarea
             placeholder="Your Message"
             name="message"
+             onChange={(e)=> setMessage(e.target.value)}
+            required
             rows={5}
             className="w-full px-4 py-3 rounded-lg bg-white/20 placeholder-gray-300 text-white outline-none focus:ring-2 focus:ring-blue-400"
           ></textarea>
