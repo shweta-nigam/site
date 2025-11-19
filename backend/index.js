@@ -4,7 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 dotenv.config();
-
+// use resend for email, as google blocked email.
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -32,6 +32,7 @@ app.post("/send-email", async (req, res) => {
 
     res.status(200).json({ success: true });
   } catch (err) {
+    console.error("Email error:", err);
     res.status(500).json({ error: "Email failed" });
   }
 });
