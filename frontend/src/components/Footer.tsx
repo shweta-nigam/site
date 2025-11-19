@@ -18,7 +18,7 @@ const Footer = () => {
           whileHover={{ scale: 1.05 }}
           className="text-xl font-semibold text-white"
         >
-          {/* <Link to="/"> Portfolio</Link> */}
+          <Link to="/" className="text-cyan-300 "> shwetanigamdev</Link>
         </motion.h3>
 
         {/* Navigation */}
