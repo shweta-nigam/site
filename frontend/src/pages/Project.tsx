@@ -71,7 +71,7 @@ const Project = () => {
       </motion.h2>
 
       <div className="flex flex-col gap-20">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 50 }}
