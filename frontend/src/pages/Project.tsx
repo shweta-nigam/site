@@ -1,159 +1,56 @@
-import { motion } from "framer-motion";
-import { Globe, ArrowRight } from "lucide-react";
-import { SiGithub } from "react-icons/si";
-import { Link } from "react-router-dom";
-import readGala from "../../src/assets/readgala.mp4";
-import finEase from "../../src/assets/finease.mp4";
+import ProjectCard from "./ProjectCard";
+import { projects } from "../data/data";
 
-const projects = [
-  {
-    id: 1,
-    title: "FinEase - Personal Finance Tracker",
-    description:
-      "FinEase is a modern personal finance tracking platform that helps users manage budgets, track expenses, and visualize financial data in real-time. It includes authentication, Google OAuth, charts, and email verification.",
-    techStack: [
-      "React + TypeScript",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "JWT",
-      "TailwindCSS",
-      "ShadCN UI",
-    ],
-    features: [
-      "📊 Dashboard with category-wise expense charts",
-      "💸 Add, update & manage budgets and expenses",
-      "🔐 JWT + Google OAuth authentication",
-      "📬 Email verification via Nodemailer",
-      "🎨 Built with React + TailwindCSS + ShadCN",
-    ],
-    github: "https://github.com/your-username/FinEase",
-    live: "https://finease-hub.vercel.app",
-    video: finEase,
-  },
-  {
-    id: 2,
-    title: "ReadGala - Online Book Store",
-    description:
-      "A full-stack MERN online bookstore that allows users to browse, purchase, and manage books seamlessly. It features secure authentication, a powerful search system, email notifications, and a modern shopping UI built with React and TailwindCSS.",
-    techStack: [
-      "React",
-      "Node.js",
-      "Express",
-      "Prisma",
-      "PostgreSQL",
-      "JWT",
-      "TailwindCSS",
-    ],
-    features: [
-      "🔐 User authentication & JWT security",
-      "📚 Book browsing and purchase flow",
-      "📧 Email notifications using Nodemailer",
-      "⚡ Backend built with Express & Prisma ORM",
-      "🎨 Responsive frontend with TailwindCSS & Framer Motion",
-    ],
-    github: "https://github.com/your-username/ReadGala",
-    live: "https://readgala.vercel.app",
-    video: readGala,
-  },
-];
-
-const Project = () => {
+export default function Projects() {
   return (
-    <section className="min-h-screen bg-D-purple text-white py-16 px-6 md:px-20">
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-bold text-center mb-12"
-      >
-        Featured Projects
-      </motion.h2>
+    <section className="projects-section">
+      <div className="flex justify-center relative">
+        {/* LEFT SIDE (cards) */}
+        <div className="flex flex-col gap-10">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
 
-      <div className="flex flex-col gap-20">
-        {projects.map((project) => (
-          <motion.div
-            key={project.id}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            // className={`flex flex-col md:flex-row ${
-            //   index % 2 !== 0 ? "md:flex-row-reverse" : ""
-            // } items-center gap-10 bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow`}
-            className="flex flex-col md:flex-row items-center gap-10 bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow"
+        {/* RIGHT SIDE (brace + label) */}
+        <div className="web-aside">
+          {/* SHARP CURLY BRACE */}
+          <svg
+            className="width-[80%] h-full"
+            viewBox="0 0 100 600"
+            preserveAspectRatio="none"
           >
-            <div className="md:w-1/2">
-              <video
-                src={project.video}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="rounded-xl shadow-lg border border-white/10"
-              />
-            </div>
+            <path
+              d="
+      M20 0
+      C80 0, 80 80, 50 120
+      C30 150, 30 220, 50 260
+      
+      L70 300
+      L50 340
+      
+      C30 380, 30 450, 50 480
+      C80 520, 80 600, 20 600
+    "
+              fill="none"
+              stroke="url(#gradient)"
+              strokeWidth="2"
+            />
+          </svg>
 
-            <div className="md:w-1/2 space-y-4">
-              <h3 className="text-3xl font-semibold">{project.title}</h3>
-              <p className="text-gray-200 leading-relaxed">
-                {project.description}
-              </p>
+          <div className="section-label">WEB DEV</div>
+        </div>
 
-              <div className="flex flex-wrap gap-2 mt-3">
-                {project.techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <ul className="list-disc pl-6 text-gray-300 mt-4 space-y-1">
-                {project.features.map((f, i) => (
-                  <li key={i}>{f}</li>
-                ))}
-              </ul>
-
-              <div className="flex gap-4 mt-6">
-                <Link
-                  to={project.github}
-                  target="_blank"
-                  className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full font-medium hover:scale-105 transition-transform"
-                >
-                  <SiGithub className="w-6 h-6" />
-                  Code
-                </Link>
-                <Link
-                  to={project.live}
-                  target="_blank"
-                  className="flex items-center gap-2 bg-gradient-to-r from-[#540979] to-[#0066FF] px-4 py-2 rounded-full font-medium hover:scale-105 transition-transform"
-                >
-                  <Globe size={18} /> Live
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        ))}
+        {/* Gradient */}
+        <svg width="0" height="0">
+          <defs>
+            <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stopColor="rgba(84, 9, 121, 1)" />
+              <stop offset="100%" stopColor="rgba(0, 102, 255, 1)" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
-
-      <motion.div
-        className="text-center mt-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-      >
-        <Link
-          to="/contact"
-          className="inline-flex items-center gap-2 text-lg font-medium hover:underline"
-        >
-          Want to collaborate? Let’s connect <ArrowRight size={20} />
-        </Link>
-      </motion.div>
     </section>
   );
-};
-
-export default Project;
+}

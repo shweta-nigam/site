@@ -10,8 +10,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) setIsScrolled(true);
-      else setIsScrolled(false);
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -30,80 +29,87 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#0a0a0a]/90 backdrop-blur-lg shadow-md border-b border-cyan-900/40 py-2"
+          ? "bg-[var(--color-bg)]/90 backdrop-blur-lg border-b border-[var(--border-accent)]/40 py-2"
           : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
         >
           <Link
             to="/"
-            className="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition"
+            className="text-xl font-bold text-[var(--color-primary)] hover:text-white transition"
           >
-            &lt; /&gt;
-            {/* &lt;DevPortfolio /&gt; */}
+            &lt;/&gt;
           </Link>
         </motion.div>
 
-        {/* Desktop Links Centered */}
+        {/* Desktop Links */}
         <div className="hidden md:flex flex-1 justify-center items-center gap-10">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className={`relative text-gray-300 text-lg hover:text-cyan-300 transition ${
-                location.pathname === link.path
-                  ? "text-cyan-400 font-semibold"
-                  : ""
-              }`}
-            >
-              {link.name}
-              {location.pathname === link.path && (
-                <motion.span
-                  layoutId="underline"
-                  className="absolute left-0 -bottom-1 w-full h-[2px] bg-cyan-400 rounded-full"
-                />
-              )}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.path;
+
+            return (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`relative text-white/70 text-lg transition ${
+                  isActive
+                    ? "text-[var(--color-primary)] font-semibold"
+                    : "hover:text-white "
+                }`}
+              >
+                {link.name}
+
+                {isActive && (
+                  <motion.span
+                    layoutId="underline"
+                    className="absolute left-0 -bottom-1 w-full h-[2px] bg-[var(--color-primary)] rounded-full"
+                  />
+                )}
+              </Link>
+            );
+          })}
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-cyan-300 hover:text-white transition"
+          className="md:hidden text-[var(--color-accent)] hover:text-white  transition"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Menu */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden flex flex-col items-center bg-[#0a0a0a]/95 backdrop-blur-lg border-t border-cyan-800/30 py-4 space-y-4"
+          className="md:hidden flex flex-col items-center bg-[var(--color-bg)]/95 backdrop-blur-lg border-t border-[var(--border-accent)]/30 py-4 space-y-4"
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              onClick={() => setIsOpen(false)}
-              className={`text-lg text-gray-300 hover:text-cyan-300 transition ${
-                location.pathname === link.path
-                  ? "text-cyan-400 font-semibold"
-                  : ""
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.path;
+
+            return (
+              <Link
+                key={link.name}
+                to={link.path}
+                onClick={() => setIsOpen(false)}
+                className={`text-lg transition ${
+                  isActive
+                    ? "text-[var(--color-primary)] font-semibold"
+                    : "text-white/70 hover:text-white "
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </motion.div>
       )}
     </nav>
