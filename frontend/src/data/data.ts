@@ -38,15 +38,15 @@ export const projects: Project[] = [
       "📱 Responsive modern UI built with Tailwind CSS and Framer Motion",
       "✅ Robust backend validation and modular API architecture using Zod",
     ],
-    github: "https://github.com/your-username/proper-poll",
+    github: "https://github.com/shweta-nigam/proper-poll-app",
     live: "https://proper-poll.quest",
     video: properPoll,
   },
   {
     id: 3,
-    title: "QuickBite - Food Delivery Mobile App",
+    title: "foodieHub - Food Delivery Mobile App",
     description:
-      "A modern food delivery mobile application UI built with React Native and Expo Router. QuickBite focuses on delivering a smooth and scalable mobile experience with authentication flow, onboarding screens, drawer navigation, reusable UI components, and responsive layouts. The app is designed with clean architecture and modern mobile-first UI principles.",
+      "A modern food delivery mobile application UI built with React Native and Expo Router. foodieHub focuses on delivering a smooth and scalable mobile experience with authentication flow, onboarding screens, drawer navigation, reusable UI components, and responsive layouts. The app is designed with clean architecture and modern mobile-first UI principles.",
     techStack: [
       "React Native",
       "Expo SDK 55",
@@ -65,8 +65,8 @@ export const projects: Project[] = [
       "🎨 Clean mobile-first design with responsive layouts",
       "🛒 Multiple app screens including Home, Orders, Search & Profile",
     ],
-    github: "https://github.com/your-username/quickbite",
-    live: "https://expo.dev/",
+    github: "https://github.com/shweta-nigam/Food-Delivery-App",
+    live: "https://github.com/shweta-nigam/Food-Delivery-App",
     video: foodieHub,
   },
 ];

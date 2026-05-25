@@ -3,24 +3,17 @@
     /* THEME TOKENS */
 
 :root {
-  /* Base */
+
   --color-bg: #0a0a0a;
   --color-text: #ffffff;
 
-  /* Brand */
-  /* --color-primary: rgba(168, 85, 247, 0.8); */
   --color-primary: rgba(85, 247, 185, 0.8);
  
-
-  /* Borders / Effects */
-  /* --border-accent: #a855f7; */
   --border-accent: rgba(28, 204, 137, 0.8);
-  --border-secondary: #223edd;
+  --border-secondary: rgb(34, 221, 165);
 
-  /* Patterns */
-  /* --pattern-line: rgba(168, 85, 247, 0.9); */
   --pattern-line: rgba(22, 180, 119, 0.8);
-  --pattern-glow: rgba(168, 85, 247, 0.2);
+  --pattern-glow: rgba(55, 151, 25, 0.2);
 
   /* Gradients */
   --gradient-primary: linear-gradient(

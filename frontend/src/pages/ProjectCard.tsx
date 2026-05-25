@@ -136,7 +136,7 @@ export default function ProjectCard({ project }: Props) {
               className="
                 flex items-center gap-2
                 px-5 py-2.5 rounded-xl
-                bg-blue-500 hover:bg-blue-600
+                bg-grey-500 hover:bg-grey-600
                 text-white
                 transition-all duration-300
               "

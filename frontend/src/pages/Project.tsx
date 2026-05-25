@@ -33,12 +33,13 @@ export default function Projects() {
       C80 520, 80 600, 20 600
     "
               fill="none"
-              stroke="url(#gradient)"
+              stroke="var(--border-accent)"
               strokeWidth="2"
             />
           </svg>
 
-          <div className="section-label">WEB DEV</div>
+          {/* <div className="section-label">WEB DEV</div> */}
+          <div className="section-label">DEV</div>
         </div>
 
         {/* Gradient */}
