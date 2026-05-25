@@ -10,9 +10,6 @@ import {
   SiMongodb,
   SiTailwindcss,
   SiExpress,
-  SiVite,
-  SiExpo,
-  SiFramer,
 } from "react-icons/si";
 
 const techStack = [
