@@ -1,4 +1,5 @@
 import properPoll from "../assets/properpoll.mp4";
+import properPollImg from "../assets/properpoll.png";
 import foodieHub from "../assets/foodieHub.mp4";
 
 export type Project = {
@@ -40,7 +41,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/shweta-nigam/proper-poll-app",
     live: "https://proper-poll.quest",
-    video: properPoll,
+    video: properPollImg,
   },
   {
     id: 3,
