@@ -3,7 +3,14 @@ import { projects } from "../data/data";
 
 export default function Projects() {
   return (
-    <section className="projects-section" id="projects">
+    <section  className="
+    py-16
+    px-16
+    border
+    border-[var(--border-accent)]
+    rounded-2xl
+    bg-[var(--color-bg)]
+  " id="projects">
       <div className="flex justify-center relative">
         {/* LEFT SIDE (cards) */}
         <div className="flex flex-col gap-10">

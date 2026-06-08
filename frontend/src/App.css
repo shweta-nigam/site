@@ -179,14 +179,6 @@ body {
 
 /* ------------------------------------ */
 
-/* project section  */
-
-.projects-section {
-  padding: 4rem 2rem;
-  border: 1px solid var(--border-accent);
-  border-radius: 16px;
-  background: var(--color-bg);
-}
 
 .web-aside {
   width: 20%;
