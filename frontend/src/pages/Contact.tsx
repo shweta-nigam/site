@@ -37,7 +37,7 @@ const contacts = [
     icon: <SiInstagram />,
     title: "Instagram",
     value: "@shwetanigamdev",
-    link: "https://instagram.com/yourhandle",
+    link: "https://www.instagram.com/shwetanigamdev",
   },
   {
     icon: <SiYoutube />,
