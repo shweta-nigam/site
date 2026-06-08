@@ -70,6 +70,7 @@ function Blog() {
         border border-[var(--border-accent)]
         rounded-[32px]
       "
+      id="blog"
     >
       {/* BACKGROUND PATTERN */}
       <div

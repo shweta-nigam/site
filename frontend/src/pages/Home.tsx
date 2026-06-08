@@ -32,7 +32,7 @@ function Home() {
   return (
     <>
       {/* hero section */}
-      <section className="relative min-h-screen bg-black text-white">
+      <section id="home" className="relative min-h-screen bg-black text-white">
         <div className="min-h-screen bg-black text-white px-6 py-10 flex justify-between ">
           {/* left side */}
           <div className="flex flex-col justify-center px-12 gap-6 leaf-card lg:mt-6">

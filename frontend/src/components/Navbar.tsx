@@ -18,11 +18,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Projects", path: "/projects" },
-    { name: "About", path: "/about" },
-    { name: "Blog", path: "/blog" },
-    { name: "Contact", path: "/contact" },
+    { name: "Home", path: "#home" },
+    { name: "Projects", path: "#projects" },
+    { name: "Blog", path: "#blog" },
+    { name: "Contact", path: "#contact" },
   ];
 
   return (
@@ -34,7 +33,6 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -54,9 +52,9 @@ const Navbar = () => {
             const isActive = location.pathname === link.path;
 
             return (
-              <Link
+              <a
                 key={link.name}
-                to={link.path}
+                href={link.path}
                 className={`relative text-white/70 text-lg transition ${
                   isActive
                     ? "text-[var(--color-primary)] font-semibold"
@@ -71,7 +69,7 @@ const Navbar = () => {
                     className="absolute left-0 -bottom-1 w-full h-[2px] bg-[var(--color-primary)] rounded-full"
                   />
                 )}
-              </Link>
+              </a>
             );
           })}
         </div>
@@ -96,9 +94,9 @@ const Navbar = () => {
             const isActive = location.pathname === link.path;
 
             return (
-              <Link
+              <a
                 key={link.name}
-                to={link.path}
+                href={link.path}
                 onClick={() => setIsOpen(false)}
                 className={`text-lg transition ${
                   isActive
@@ -107,7 +105,7 @@ const Navbar = () => {
                 }`}
               >
                 {link.name}
-              </Link>
+              </a>
             );
           })}
         </motion.div>
