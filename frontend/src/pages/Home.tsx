@@ -1,7 +1,7 @@
 import Project from "./Project";
 import Blog from "./Blog";
 import Contact from "./Contact";
-
+import { useNavigate } from "react-router-dom";
 import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
 
 import {
@@ -28,6 +28,7 @@ const techStack = [
   { name: "GitHub", icon: FaGithub, color: "#ffffff" },
 ];
 function Home() {
+   const navigate = useNavigate();
   return (
     <>
       {/* hero section */}
@@ -52,8 +53,20 @@ function Home() {
             </div>
 
             <div className="flex gap-4 mt-4">
-              <button className="btn btn-primary">View Resume</button>
-              <button className="btn btn-outline">View Projects</button>
+              <a
+    href="/resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn btn-primary"
+  >
+    View Resume
+  </a>
+              <button
+        className="btn btn-outline"
+        onClick={() => navigate("/projects")}
+      >
+        View Projects
+      </button>
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@ export default function ProjectCard({ project }: Props) {
       "
     >
       {/* VIDEO SECTION */}
-      <div
+      {/* <div
         className={`
           w-full flex justify-center items-center
           ${isMobileApp ? "lg:w-[35%]" : "lg:w-[50%]"}
@@ -63,7 +63,39 @@ export default function ProjectCard({ project }: Props) {
             `}
           />
         )}
-      </div>
+      </div> */}
+      {/* IMAGE SECTION */}
+<div
+  className={`
+    w-full flex justify-center items-center
+    ${isMobileApp ? "lg:w-[35%]" : "lg:w-[50%]"}
+  `}
+>
+  <img
+    src={project.image}
+    alt={project.title}
+    className={`
+      border border-white/10
+      shadow-xl rounded-2xl
+      object-cover
+      transition-transform duration-500
+      hover:scale-[1.02]
+
+      ${
+        isMobileApp
+          ? `
+            w-[260px]
+            h-[520px]
+          `
+          : `
+            w-full
+            max-w-[650px]
+            aspect-video
+          `
+      }
+    `}
+  />
+</div>
 
       {/* CONTENT SECTION */}
       <div

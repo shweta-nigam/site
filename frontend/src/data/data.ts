@@ -1,6 +1,6 @@
-import properPoll from "../assets/properpoll.mp4";
+// import properPoll from "../assets/properpoll.mp4";
 import properPollImg from "../assets/properpoll.png";
-import foodieHub from "../assets/foodieHub.mp4";
+import foodieHub from "../assets/foodiehub-1.png";
 
 export type Project = {
   id: number;
@@ -10,7 +10,7 @@ export type Project = {
   features: string[];
   github: string;
   live: string;
-  video?: string;
+  image?: string;
 };
 
 export const projects: Project[] = [
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/shweta-nigam/proper-poll-app",
     live: "https://proper-poll.quest",
-    video: properPollImg,
+    image : properPollImg,
   },
   {
     id: 3,
@@ -68,6 +68,6 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/shweta-nigam/Food-Delivery-App",
     live: "https://github.com/shweta-nigam/Food-Delivery-App",
-    video: foodieHub,
+    image : foodieHub,
   },
 ];
